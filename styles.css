@@ -69,19 +69,23 @@ body::before {
 }
 
 .site-header {
-  width: min(1240px, calc(100% - 56px));
+  width: min(1500px, calc(100% - 64px));
   margin: 0 auto;
-  padding: 30px 0 12px;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  gap: 34px;
+  padding: 28px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
   width: 330px;
+  position: relative;
+  top: -105px;
+  left: -10px;
 }
 
 .brand img {
@@ -96,16 +100,23 @@ body::before {
   display: flex;
   align-items: center;
   gap: 34px;
+  margin-left: auto;
+  margin-right: 44px;
+  padding-top: 10px;
 }
 
-.nav-links a,
-.nav-cta {
+.nav-links a {
   color: var(--text);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   font-size: 0.9rem;
   font-weight: 800;
+  opacity: 0.88;
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .nav-links a {
@@ -117,26 +128,35 @@ body::before {
 }
 
 .nav-cta {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.9rem;
+  font-weight: 800;
   padding: 14px 22px;
   border: 1px solid var(--line-blue);
   border-radius: 10px;
   background: rgba(10, 24, 44, 0.42);
   box-shadow: 0 16px 40px rgba(0,0,0,0.24);
+  margin-top: 0;
 }
 
 .hero {
   width: min(1240px, calc(100% - 56px));
-  margin: 0 auto;
-  min-height: 650px;
+  margin: -140px auto 0;
+  min-height: 400px;
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  align-items: center;
+  align-items: start;
   gap: 42px;
-  padding: 40px 0 30px;
+  padding: 0;
 }
 
 .hero-copy {
-  padding-top: 36px;
+  padding-top: 0;
+  position: relative;
+  top: -40px;
 }
 
 .hero h1 {
@@ -201,6 +221,7 @@ body::before {
 
 .hero-visual {
   position: relative;
+  top: -60px;
   min-height: 520px;
   display: flex;
   align-items: center;
